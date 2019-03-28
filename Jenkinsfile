@@ -1,25 +1,41 @@
 pipeline {
-    agent any
+    agent { label 'docker' }
+    triggers {
+        bitbucketPush()
+    }
     environment {
-        CI = 'true'
+        // Specify your environment variables.
+        APP_VERSION = '1'
     }
     stages {
         stage('Build') {
             steps {
-                sh './jenkins/scripts/build.sh'
+                // Print all the environment variables.
+                sh 'printenv'
+                sh 'echo $GIT_BRANCH'
+                sh 'echo $GIT_COMMIT'
+                echo 'Install non-dev composer packages and test a symfony cache clear'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
+                echo 'Building the docker images with the current git commit'
             }
         }
-        stage('Test') {
+
+        stage('Push') {
+            when {
+                branch 'master'
+            }
             steps {
-                sh './jenkins/scripts/test.sh'
+                echo 'Deploying docker images'
+
             }
         }
-        stage('Deliver') {
-            steps {
-                sh './jenkins/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
-            }
+    }
+    post {
+        always {
+            // Always cleanup after the build.
+            sh 'docker-compose down'
+            sh 'rm .env'
         }
     }
 }
