@@ -6,11 +6,11 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
+                sh 'pwd && ls'
+                sh '/usr/local/bin/docker-compose down'
+                sh '/usr/local/bin/docker-compose up -d'
                 sh 'pwd'
-                sh 'cd src && /usr/local/bin/docker-compose down'
-                sh 'cd src && /usr/local/bin/docker-compose up -d'
-                sh 'pwd'
-                sh 'sleep 10 && cd src && /usr/local/bin/docker-compose run web php artisan migrate'
+                sh 'sleep 10 && /usr/local/bin/docker-compose run web php artisan migrate'
             }
         }
     }
