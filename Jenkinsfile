@@ -14,6 +14,7 @@ pipeline {
                 sh 'printenv'
                 sh 'echo $GIT_BRANCH'
                 sh 'echo $GIT_COMMIT'
+                sh 'cp .env.example .env'
                 echo 'Install non-dev composer packages and test a symfony cache clear'
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
