@@ -1,14 +1,25 @@
-node {
-    stage('preparation') {
-        // Checkout the master branch of the Laravel framework repository
-        git branch: 'master', url: 'https://github.com/tranvanthuc/laravel-demo.git'
+pipeline {
+    agent any
+    environment {
+        CI = 'true'
     }
-    stage("composer_install") {
-        // Run `composer update` as a shell script
-        sh 'composer install'
-    }
-    stage("phpunit") {
-        // Run PHPUnit
-        sh 'vendor/bin/phpunit'
+    stages {
+        stage('Build') {
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }
+        stage('Deliver') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/scripts/kill.sh'
+            }
+        }
     }
 }
