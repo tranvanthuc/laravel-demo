@@ -1,0 +1,58 @@
+version: '3'
+
+networks:
+  default: {}
+
+services:
+  redis:
+    image: redis:3.2
+  smtp:
+    image: schickling/mailcatcher
+    ports:
+    - 1080:1080
+
+  # The Database
+  mysql:
+    image: mysql:5.6
+    volumes:
+    - dbdata:/var/lib/mysql
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    ports:
+    - 4306:3306
+    environment:
+      MYSQL_DATABASE: demo
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_RANDOM_ROOT_PASSWORD: "false"
+      MYSQL_ROOT_PASSWORD: root
+
+  web:
+    build:
+      context: ./docker/web
+    working_dir: /var/www/html
+    volumes:
+    - ./:/var/www/html/
+    - ./docker/web/logs:/var/log/httpd
+    ports:
+    - 9090:80
+    links:
+    - mysql
+    - redis
+    - smtp
+    depends_on:
+    - mysql
+    environment:
+    - DB_HOST=mysql
+    - DB_PORT=3306
+    - DB_DATABASE=demo
+    - DB_USERNAME=root
+    - DB_PASSWORD=password
+    - CACHE_DRIVER=redis
+    - REDIS_HOST=redis
+    - SESSION_DRIVER=redis
+    env_file: .env
+
+volumes:
+  dbdata:
+  redisdata:
