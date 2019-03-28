@@ -5,3 +5,51 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Thu Mar 28 06:53:14.243047 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
 [Thu Mar 28 06:53:14.391567 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
 [Thu Mar 28 06:53:14.391601 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 28 08:55:15.880266 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Thu Mar 28 08:55:29.316246 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.96.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 28 08:55:29.331729 2019] [http2:warn] [pid 1] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Mar 28 08:55:29.331740 2019] [http2:warn] [pid 1] AH02951: mod_ssl does not seem to be enabled
+[Thu Mar 28 08:55:29.332293 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 28 08:55:29.391930 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
+[Thu Mar 28 08:55:29.391960 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 28 09:00:10.576550 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Thu Mar 28 09:00:12.160830 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.96.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 28 09:00:12.175881 2019] [http2:warn] [pid 1] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Mar 28 09:00:12.175892 2019] [http2:warn] [pid 1] AH02951: mod_ssl does not seem to be enabled
+[Thu Mar 28 09:00:12.176325 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 28 09:00:12.201271 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
+[Thu Mar 28 09:00:12.201311 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 28 09:00:31.124296 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Thu Mar 28 09:00:40.894841 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.96.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 28 09:00:40.917030 2019] [http2:warn] [pid 1] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Mar 28 09:00:40.917056 2019] [http2:warn] [pid 1] AH02951: mod_ssl does not seem to be enabled
+[Thu Mar 28 09:00:40.917539 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 28 09:00:40.946840 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
+[Thu Mar 28 09:00:40.946882 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 28 09:04:12.300609 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Thu Mar 28 09:04:30.008096 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.128.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 28 09:04:30.025289 2019] [http2:warn] [pid 1] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Mar 28 09:04:30.025296 2019] [http2:warn] [pid 1] AH02951: mod_ssl does not seem to be enabled
+[Thu Mar 28 09:04:30.025626 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 28 09:04:30.048783 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
+[Thu Mar 28 09:04:30.048818 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 28 09:08:06.468620 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Thu Mar 28 09:08:16.638697 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.128.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 28 09:08:16.654378 2019] [http2:warn] [pid 1] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Mar 28 09:08:16.654388 2019] [http2:warn] [pid 1] AH02951: mod_ssl does not seem to be enabled
+[Thu Mar 28 09:08:16.654734 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 28 09:08:16.677173 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
+[Thu Mar 28 09:08:16.677207 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 28 09:10:05.587168 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Thu Mar 28 09:10:07.026022 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.128.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 28 09:10:07.045802 2019] [http2:warn] [pid 1] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Mar 28 09:10:07.045809 2019] [http2:warn] [pid 1] AH02951: mod_ssl does not seem to be enabled
+[Thu Mar 28 09:10:07.046165 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 28 09:10:07.068939 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Amazon) PHP/7.1.27 configured -- resuming normal operations
+[Thu Mar 28 09:10:07.069261 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
