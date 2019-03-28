@@ -14,6 +14,6 @@
 #php artisan key:generate
 #php artisan config:cache
 
-docker-composer build
-docker-composer up -d
+docker-compose build
+docker-compose up -d
 docker ps
