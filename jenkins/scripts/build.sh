@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
 echo 'Build'
-rm -rf yarn.lock
-npm install
-npm run dev
+sudo npm i -g yarn
+yarn install
+yarn dev
 
 rm -rf composer.lock
 composer install
