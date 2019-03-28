@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'docker' }
     triggers {
-        bitbucketPush()
+        gitPush()
     }
     environment {
         // Specify your environment variables.
