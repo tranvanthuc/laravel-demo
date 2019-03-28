@@ -1,8 +1,10 @@
 pipeline {
-    agent any
+    agent { node { label 'swarm-ci' } }
     stages {
         stage('Build') {
             steps {
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
                 sh './jenkins/scripts/build.sh'
             }
         }

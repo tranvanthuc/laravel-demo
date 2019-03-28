@@ -10,11 +10,11 @@
 #composer dump
 #
 ##! php artisan
-#cp .env.example .env
+cp .env.example .env
 #php artisan key:generate
 #php artisan config:cache
 
-docker-compose build
+
 docker-compose up -d
 docker ps
 ll
