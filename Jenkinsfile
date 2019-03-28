@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
+                sh 'cp .env.example .env'
                 sh 'pwd && ls'
                 sh '/usr/local/bin/docker-compose down'
                 sh '/usr/local/bin/docker-compose up -d'
