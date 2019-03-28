@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'docker' }
     triggers {
-        gitPush()
+        githubPush()
     }
     environment {
         // Specify your environment variables.
