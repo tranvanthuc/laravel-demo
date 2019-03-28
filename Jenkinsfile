@@ -1,17 +1,17 @@
 pipeline {
-    agent { node { label 'swarm-ci' } }
+    agent any
+    environment {
+        CI = 'true'
+    }
     stages {
         stage('Build') {
             steps {
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
                 sh './jenkins/scripts/build.sh'
             }
         }
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
-                sh 'vendor/bin/phpunit'
             }
         }
         stage('Deliver') {
