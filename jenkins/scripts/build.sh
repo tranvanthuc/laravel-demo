@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 echo 'Build'
-npm install -g yarn
-yarn install
-yarn dev
+rm -rf yarn.lock
+npm install
+npm run dev
 
+rm -rf composer.lock
 composer install
 composer dump
 
