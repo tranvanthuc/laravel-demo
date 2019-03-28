@@ -14,7 +14,7 @@
 #php artisan key:generate
 #php artisan config:cache
 
-/usr/local/bin/docker-compose build
-/usr/local/bin/docker-compose up -d
-pwd
+docker-compose build
+docker-compose up -d
+docker ps
 ll
