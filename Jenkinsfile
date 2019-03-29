@@ -4,13 +4,15 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Deploy') {
+        stage('Build') {
             steps {
-                sh 'cp .env.example .env'
-                sh 'pwd && ls'
-                sh 'sudo docker-compose down'
-                sh 'sudo docker-compose up -d'
-                sh 'sleep 10'
+                sh './jenkins/scripts/build.sh'
+            }
+        }
+
+        stage('Stop') {
+            steps {
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }

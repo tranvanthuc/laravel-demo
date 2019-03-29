@@ -1,15 +1,8 @@
 #!/usr/bin/env sh
 
-echo 'Build'
-sudo npm i -g yarn
-yarn install
-yarn dev
-
-rm -rf composer.lock
-composer install
-composer dump
-
-#! php artisan
 cp .env.example .env
-php artisan key:generate
+sudo docker-compose up -d
+sudo docker exec -it web bash
+
+# in docker container web
 php artisan config:cache

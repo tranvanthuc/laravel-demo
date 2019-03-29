@@ -8,11 +8,11 @@ RUN yum install -y php71 php71-cli php71-common php71-json php71-mbstring php71-
 RUN yum install -y nano
 
 # Install Composer
-RUN  curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+RUN composer install
 
 # Install nodejs
 RUN yum -y update
-RUN yum install -y gcc gcc-c++ make openssl-devel
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
 RUN yum -y install nodejs
@@ -24,7 +24,6 @@ RUN yum clean all
 
 RUN mkdir -p /var/www/html/
 RUN chmod -R 755 /var/www/html/
-
 
 # config virtual host
 ADD vhost.conf /etc/httpd/conf.d
