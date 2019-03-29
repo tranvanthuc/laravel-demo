@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 cp .env.example .env
-sudo docker-compose up -d --build
+sudo docker-compose up --build -d
 sudo chmod -R 777 storage vendor node_modules .env
 composer install
 sudo docker-compose exec web php artisan key:generate
