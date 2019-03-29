@@ -2,7 +2,7 @@
 
 cp .env.example .env
 sudo docker-compose up -d
-sudo chmod -R 777 storage vendor node_modules
+sudo chmod -R 777 storage vendor node_modules env
 composer install
 sudo docker exec -i web bash
 
