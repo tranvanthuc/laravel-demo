@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 echo 'Delivery'
-echo 'http://localhost:9000'
+echo 'http://localhost:9090'
