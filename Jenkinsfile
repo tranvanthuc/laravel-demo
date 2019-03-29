@@ -10,9 +10,10 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                sh './jenkins/scripts/test.sh'
-            }
+             docker.image('web').inside {
+                sh 'php --version'
+                sh './vendor/bin/phpunit --testsuite Unit'
+             }
         }
         stage('Deliver') {
             steps {
