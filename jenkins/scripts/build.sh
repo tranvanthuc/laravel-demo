@@ -9,5 +9,6 @@ sudo docker exec -i web bash
 sleep 3
 # in docker container web
 php artisan config:clear
+php artisan migrate
 yarn install
 yarn dev
