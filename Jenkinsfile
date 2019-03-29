@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'cp .env.example .env'
                 sh 'pwd && ls'
-                sh 'docker-compose down'
+                sh 'sudo docker-compose down'
                 sh 'sudo docker-compose up -d'
                 sh 'sleep 10'
             }
