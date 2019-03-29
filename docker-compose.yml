@@ -35,6 +35,8 @@ services:
     depends_on:
       - mysql
       - redis
+    links:
+      - mysql
     environment:
       - DB_HOST=mysql
       - DB_PORT=3306
