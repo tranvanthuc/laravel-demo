@@ -5,8 +5,12 @@ networks:
 
 services:
   redis:
+    container_name: redis
     image: redis:3.2
+    ports:
+    - 6380:6379
   smtp:
+    container_name: smtp
     image: schickling/mailcatcher
     ports:
     - 1080:1080
