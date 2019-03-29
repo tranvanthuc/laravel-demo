@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo 'test'
+echo 'Test'
+./vendor/bin/phpunit
