@@ -10,12 +10,9 @@ pipeline {
             }
         }
         stage('Test') {
-             steps {
-                docker.image('web').inside {
-                    sh 'php --version'
-                    sh './vendor/bin/phpunit --testsuite Unit'
-                }
-             }
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
         }
         stage('Deliver') {
             steps {
@@ -24,5 +21,6 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
         }
+
     }
 }

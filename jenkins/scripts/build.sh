@@ -6,7 +6,7 @@ sudo chmod -R 777 storage vendor node_modules .env
 composer install
 sudo docker-compose exec web php artisan key:generate
 sudo docker exec -i web bash
-
+sleep 3
 # in docker container web
 php artisan config:cache
 yarn install

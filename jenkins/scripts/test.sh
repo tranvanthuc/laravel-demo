@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 echo 'Test'
-sudo docker-compose exec web ./vendor/bin/phpunit
+sudo docker exec -i web bash
+sleep 3
+./vendor/bin/phpunit
