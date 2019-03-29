@@ -10,9 +10,11 @@ pipeline {
             }
         }
         stage('Test') {
-             docker.image('web').inside {
-                sh 'php --version'
-                sh './vendor/bin/phpunit --testsuite Unit'
+             steps {
+                docker.image('web').inside {
+                    sh 'php --version'
+                    sh './vendor/bin/phpunit --testsuite Unit'
+                }
              }
         }
         stage('Deliver') {
