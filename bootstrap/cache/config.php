@@ -217,11 +217,11 @@
       'mysql' => 
       array (
         'driver' => 'mysql',
-        'host' => 'mysql',
+        'host' => 'database',
         'port' => '3306',
         'database' => 'demo',
-        'username' => 'root',
-        'password' => 'password',
+        'username' => 'homestead',
+        'password' => 'secret',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -232,11 +232,11 @@
       'pgsql' => 
       array (
         'driver' => 'pgsql',
-        'host' => 'mysql',
+        'host' => 'database',
         'port' => '3306',
         'database' => 'demo',
-        'username' => 'root',
-        'password' => 'password',
+        'username' => 'homestead',
+        'password' => 'secret',
         'charset' => 'utf8',
         'prefix' => '',
         'schema' => 'public',
@@ -245,11 +245,11 @@
       'sqlsrv' => 
       array (
         'driver' => 'sqlsrv',
-        'host' => 'mysql',
+        'host' => 'database',
         'port' => '3306',
         'database' => 'demo',
-        'username' => 'root',
-        'password' => 'password',
+        'username' => 'homestead',
+        'password' => 'secret',
         'charset' => 'utf8',
         'prefix' => '',
       ),
