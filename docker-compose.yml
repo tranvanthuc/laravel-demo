@@ -46,6 +46,7 @@ services:
     - smtp
     depends_on:
     - mysql
+    - redis
     environment:
     - DB_HOST=mysql
     - DB_PORT=3306

@@ -8,6 +8,6 @@ sudo docker-compose exec web php artisan key:generate
 sudo docker exec -i web bash
 sleep 3
 # in docker container web
-php artisan config:cache
+php artisan config:clear
 yarn install
 yarn dev
