@@ -8,6 +8,7 @@ sudo docker exec -i web bash
 
 # in docker container web
 php artisan key:generate
+cat .env
 php artisan cache:clear
 php artisan config:clear
 php artisan config:cache
