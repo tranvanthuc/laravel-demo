@@ -22,11 +22,6 @@ pipeline {
                 deleteDir()
             }
         }
-
-        stage('Cleanup') {
-            deleteDir()
-        }
-
     }
      post {
         always {
