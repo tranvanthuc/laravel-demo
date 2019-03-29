@@ -3,11 +3,11 @@
 cp .env.example .env
 sudo docker-compose up -d
 sudo chmod -R 777 storage
-sudo docker exec -it web bash
+composer install
+sudo docker exec -i web bash
 
 # in docker container web
 php artisan key:generate
 php artisan config:cache
-composer install
 yarn install
 yarn dev
