@@ -10,10 +10,6 @@ pipeline {
             }
         }
 
-        stage('Stop') {
-            steps {
-                sh './jenkins/scripts/kill.sh'
-            }
-        }
+
     }
 }
