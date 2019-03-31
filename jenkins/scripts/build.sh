@@ -4,7 +4,7 @@ cp .env.example .env
 sudo docker-compose up --build -d
 sudo chmod -R 777 storage vendor node_modules .env
 rm -rf composer.lock
-docker exec -i web bash
+sudo docker exec -i web bash
 
 # in docker container web
 composer install
