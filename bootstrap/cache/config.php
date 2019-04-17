@@ -8,7 +8,7 @@
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:PDOnrvGBSQWT8LKhs5ZcFnwnwII2nu70gX17BpYA+cA=',
+    'key' => 'base64:gLmztmxDpv0qMy2s1LGYPPYypWZau7PFMudayxk7g1E=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -217,7 +217,7 @@
       'mysql' => 
       array (
         'driver' => 'mysql',
-        'host' => 'database',
+        'host' => 'mysql',
         'port' => '3306',
         'database' => 'demo',
         'username' => 'homestead',
@@ -232,7 +232,7 @@
       'pgsql' => 
       array (
         'driver' => 'pgsql',
-        'host' => 'database',
+        'host' => 'mysql',
         'port' => '3306',
         'database' => 'demo',
         'username' => 'homestead',
@@ -245,7 +245,7 @@
       'sqlsrv' => 
       array (
         'driver' => 'sqlsrv',
-        'host' => 'database',
+        'host' => 'mysql',
         'port' => '3306',
         'database' => 'demo',
         'username' => 'homestead',
@@ -320,7 +320,7 @@
   ),
   'queue' => 
   array (
-    'default' => 'sync',
+    'default' => 'redis',
     'connections' => 
     array (
       'sync' => 
