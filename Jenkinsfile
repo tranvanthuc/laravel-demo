@@ -14,6 +14,12 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                echo 'Finish Delivery'
+            }
+        }
+
+        state('Kill') {
+            steps {
                 sh './jenkins/scripts/kill.sh'
             }
         }
