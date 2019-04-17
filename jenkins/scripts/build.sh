@@ -2,7 +2,7 @@
 
 cp .env.example .env
 sudo docker-compose up --build -d
-sudo chmod -R 777 storage vendor node_modules .env
+sudo chmod -R 777 storage node_modules .env
 rm -rf composer.lock
 sudo docker exec -i web bash
 
