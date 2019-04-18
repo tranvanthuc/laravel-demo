@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 cp .env.example .env
- docker-compose up --build -d
+sudo docker-compose up --build -d
 sudo chmod -R 777 storage vendor node_modules .env
- rm -rf composer.lock
- docker exec -it laravel_demo_web bash
+sudo rm -rf composer.lock
+sudo docker exec -it laravel_demo_web bash
 
 # in docker container web
 
