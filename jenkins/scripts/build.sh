@@ -6,4 +6,4 @@ sudo docker-compose up --build -d
 sudo rm -rf composer.lock
 
 # in docker container web
-sudo docker-compose exec -T web composer install 
+# sudo docker-compose exec -T web composer install 
