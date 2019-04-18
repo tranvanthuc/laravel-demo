@@ -24,7 +24,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
 RUN apt-get install nodejs -y
 RUN npm install -g yarn
-RUN chmod -R 777 /var/www/html
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
@@ -38,6 +37,9 @@ COPY --chown=www:www . /var/www/html
 
 # Change current user to www
 USER www
+
+RUN chown -R 775  /var/www/html
+RUN chown -R $USER:$USER /var/www/html
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
