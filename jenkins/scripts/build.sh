@@ -2,7 +2,7 @@
 
 cp .env.example .env
 sudo docker-compose up --build -d
-sudo chmod -R 777 storage bootstrap public .env
+sudo chown -R jenkins:jenkins storage bootstrap public .env
 sudo rm -rf composer.lock
 
 # in docker container web
