@@ -6,5 +6,4 @@ sudo docker-compose up --build -d
 sudo rm -rf composer.lock
 
 # in docker container web
-pwd
-sudo docker exec laravel_demo_web jenkins/scripts/build-docker.sh
+sudo docker-compose exec web pwd 
