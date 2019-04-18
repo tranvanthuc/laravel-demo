@@ -3,7 +3,7 @@ services:
 
   # The Application
   app:
-    # container_name: docker_app
+    # container_name: laravel-demo-app
     build:
       context: ./docker/app
       dockerfile: Dockerfile
@@ -25,7 +25,7 @@ services:
 
   # The Web Server
   web:
-    container_name: laravel_demo_web
+    # container_name: laravel_demo_web
     build:
       context: ./docker/web
       dockerfile: Dockerfile
