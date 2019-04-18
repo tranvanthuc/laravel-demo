@@ -7,9 +7,4 @@ sudo rm -rf composer.lock
 
 # in docker container web
 
-sudo docker-compose exec -i web composer install
-sudo docker-compose exec -i web php artisan key:generate
-sudo docker-compose exec -i web php artisan config:clear
-sudo docker-compose exec -i web php artisan migrate
-sudo docker-compose exec -i web yarn install
-sudo docker-compose exec -i web yarn dev
+sudo docker exec laravel_demo_web ./build-docker.sh
