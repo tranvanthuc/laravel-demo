@@ -60,6 +60,13 @@ services:
     volumes:
       - jkredisdata:/data
 
+  composer:
+    image: composer/composer
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    command: ["install --ignore-platform-reqs", "dump-autoload --optimize"]
+
 volumes:
   jkdbdata:
   jkredisdata:
