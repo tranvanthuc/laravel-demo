@@ -26,19 +26,19 @@ RUN apt-get install nodejs -y
 RUN npm install -g yarn
 
 # Add user for laravel application
-# RUN groupadd -g 1000 www
-# RUN useradd -u 1000 -ms /bin/bash -g www www
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
 
-# # Copy existing application directory contents
-# COPY . /var/www/html
+# Copy existing application directory contents
+COPY . /var/www/html
 
-# # Copy existing application directory permissions
-# COPY --chown=www:www . /var/www/html
+# Copy existing application directory permissions
+COPY --chown=www:www . /var/www/html
 
-# # Change current user to www
-# USER www
+# Change current user to www
+USER www
 
-# RUN chown -R $USER:$USER /var/www/html
+RUN composer install
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
