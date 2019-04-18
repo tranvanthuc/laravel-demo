@@ -7,4 +7,4 @@ sudo rm -rf composer.lock
 
 # in docker container web
 
-sudo docker exec laravel_demo_web ./build-docker.sh
+sudo docker exec -i laravel_demo_web /jenkins/scripts/build-docker.sh
