@@ -17,11 +17,11 @@ pipeline {
                 echo 'Deploy'
             }
         }
-
-        stage('Kill') {
-            steps {
-                sh './jenkins/scripts/kill.sh'
-            }
+    }
+    
+    post {
+        always {
+            sh './jenkins/scripts/kill.sh'
         }
     }
 }
