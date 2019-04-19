@@ -13,8 +13,11 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                echo 'Finish Delivery'
+                script {
+                    def CHECK_DEPLOY = input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                    env.CHECK_DEPLOY = CHECK_DEPLOY;
+                }
+                echo 'Finish Delivery ${env.CHECK_DEPLOY}'
             }
         }
 
@@ -22,6 +25,11 @@ pipeline {
             steps {
                 sh './jenkins/scripts/kill.sh'
             }
+        }
+    }
+    post {
+        failure {
+            mail to: tranvanthuc365@gmail.com, subject: 'The Pipeline failed :('
         }
     }
 }
