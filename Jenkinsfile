@@ -27,9 +27,4 @@ pipeline {
             }
         }
     }
-    post {
-        failure {
-            mail to: tranvanthuc365@gmail.com, subject: 'The Pipeline failed :('
-        }
-    }
 }
