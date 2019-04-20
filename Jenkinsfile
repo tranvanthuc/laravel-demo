@@ -4,17 +4,17 @@ pipeline {
         CI = 'true'
     }
     stages {
-        // stage('Build') {
-        //     steps {
-        //         sh './jenkins/scripts/build.sh'
-        //     }
-        // }
+        stage('Build') {
+            steps {
+                sh './jenkins/scripts/build.sh'
+            }
+        }
         
-        // stage('Test') {
-        //     steps {
-        //         sh './jenkins/scripts/test.sh'
-        //     }
-        // }
+        stage('Test') {
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }
        
         stage('Deliver') {
             steps {
