@@ -8,7 +8,7 @@
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:PDOnrvGBSQWT8LKhs5ZcFnwnwII2nu70gX17BpYA+cA=',
+    'key' => 'base64:gLmztmxDpv0qMy2s1LGYPPYypWZau7PFMudayxk7g1E=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -320,7 +320,7 @@
   ),
   'queue' => 
   array (
-    'default' => 'sync',
+    'default' => 'redis',
     'connections' => 
     array (
       'sync' => 

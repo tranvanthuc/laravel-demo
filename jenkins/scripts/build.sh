@@ -1,15 +1,16 @@
 #!/usr/bin/env sh
 
-echo 'Build'
-sudo npm i -g yarn
-yarn install
-yarn dev
+# cp .env.example .env
+sudo docker-compose up --build -d
 
-rm -rf composer.lock
-composer install
-composer dump
+# in docker container web
+sudo docker-compose exec -T app composer install
+sudo docker-compose exec -T app php artisan key:generate
+sudo docker-compose exec -T app php artisan config:cache
+sudo docker-compose exec -T app php artisan migrate
+sudo docker-compose exec -T app yarn install
+sudo docker-compose exec -T app yarn dev
 
-#! php artisan
-cp .env.example .env
-php artisan key:generate
-php artisan config:cache
+
+
+

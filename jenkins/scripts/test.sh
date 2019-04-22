@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo 'test'
+echo 'Unit test'
+sudo docker-compose exec -T app ./vendor/bin/phpunit

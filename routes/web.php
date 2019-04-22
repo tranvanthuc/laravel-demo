@@ -12,5 +12,5 @@
 */
 
 Route::get('/', function () {
-    return "True";
+    return "How to deploy Jenkins & Deployer";
 });
