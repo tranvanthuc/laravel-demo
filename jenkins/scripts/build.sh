@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-# cp .env.example .env
+# check .env exists or create new
+test -e .env && cp .env.example .env
 sudo docker-compose up --build -d
 
 # in docker container web
