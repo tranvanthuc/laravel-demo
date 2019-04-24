@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# cp .env.example .env
+test -e .env || cp .env.example .env
 sudo docker-compose up --build -d
 
 # in docker container web
