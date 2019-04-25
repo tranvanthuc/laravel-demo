@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         CI = 'true'
+        BRANCH_NAME = 'develop'
     }
     stages {
         stage('Build') {

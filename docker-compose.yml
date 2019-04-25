@@ -39,7 +39,7 @@ services:
 
   # The Database
   database:
-    container_name: docker_db
+    # container_name: docker_db
     image: mysql:5.7
     volumes:
       - jkdbdata:/var/lib/mysql
